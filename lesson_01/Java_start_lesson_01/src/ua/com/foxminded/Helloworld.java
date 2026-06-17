@@ -11,6 +11,10 @@ System.out.println(message_de);
 int zahl = 1654;
 String buchstabe = "N UA";
 System.out.println(buchstabe + " " + zahl);
+float i = 5;
+float j = 3;
+float result = i / j;
+System.out.println(result);
 	}
 
 }
