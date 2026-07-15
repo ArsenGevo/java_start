@@ -12,24 +12,31 @@ public class Carmanager {
 		toyota.yearOfManufacture = 2008;
 		toyota.weight = 1200;
 		toyota.preice = 15000;
-		toyota.colour = "White";
+		toyota.color = "White";
 
 		Car renault = new Car();
 		renault.model = "Renault logan";
-		renault.colour = "Green";
+		renault.color = "Green";
 		renault.preice = 11000;
 		renault.weight = 1300;
 		renault.yearOfManufacture = 2017;
         */
 		
-		//record with constructor:
+		//record with constructor and enum:
 		
-		Car toyota = new Car ("Toyota Prius", "White", 2008, 1200, 15000);
+		Car toyota = new Car ("Toyota Prius", Color.WHITE, 2008, 1200, 15000);
 		
-		Car renault = new Car ("Renault logan", "Green", 2017, 1300, 11000);
+		Car renault = new Car ("Renault logan", Color.GREEN, 2017, 1300, 11000);
+		
+		//frenault2 for equals prakticy
+		Car renault2 = new Car ("Renault logan", Color.GREEN, 2017, 1300, 11000);
 		
 		System.out.println(toyota);
 		System.out.println(renault);
+		
+		//equals prakticy with genetated methods Hash and Equals:
+		System.out.println(renault.equals(toyota));
+		System.out.println(renault.equals(renault2));
 		
 	}
 
