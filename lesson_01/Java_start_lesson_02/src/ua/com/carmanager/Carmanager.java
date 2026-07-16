@@ -31,12 +31,21 @@ public class Carmanager {
 		//frenault2 for equals prakticy
 		Car renault2 = new Car ("Renault logan", Color.GREEN, 2017, 1300, 11000);
 		
+
+		
 		System.out.println(toyota);
 		System.out.println(renault);
 		
 		//equals prakticy with genetated methods Hash and Equals:
 		System.out.println(renault.equals(toyota));
 		System.out.println(renault.equals(renault2));
+		
+		
+		//for check int distance:
+		toyota.addDistance(1000);
+		toyota.addDistance(20,55);
+		int result = toyota.getDistance();
+		System.out.println("dist ist "+ result);
 		
 	}
 

@@ -16,7 +16,10 @@ public class Car {
 
 	int weight;
 	
-	//enum for color. replaced Srtring color = "white";
+	//lesson2.7 distance.
+	private int distance = 0;
+	
+	//lesson2.5 enum for color. replaced record: Srtring color = "white";
 	Color color;
 
 	// Constructor (default):
@@ -28,21 +31,49 @@ public class Car {
 		this.yearOfManufacture = yearOfManufacture;
 		this.weight = weight;
 		this.preice = preice;
-		
 		//Ключевое слово this в Java означает - текущий объект, внутри которого сейчас выполняется код.
 	}
 
-	//genetated methods Hash and Equals:
 	
+	
+	// get method для вывода переменной distance
+	public int getDistance() {
+		return distance;
+	}
+	
+	//set method "addDistance" для записи переменной distance с проверкой условия
+	public void addDistance(int extradistance) {
+		if (extradistance > 0) {
+			distance = distance + extradistance;
+		}
+		else {
+			System.out.println("probeg tebe ne skrutit'");
+		}
+	}
+			
+	// перегруз метода "addDistance"	
+	 public void addDistance(double extradistance) {
+				if (extradistance > 0) {
+					distance = distance + extradistance;
+				}
+				else {
+					System.out.println("probeg tebe ne skrutit'");
+		}
+	}
+
+
+
+
+	//genetated methods Hash and Equals:
 	@Override
 	public String toString() {
 		return "Car [model=" + model + ", yearOfManufacture=" + yearOfManufacture + ", preice=" + preice + ", weight="
-				+ weight + ", color=" + color + "]";
+				+ weight + ", distance=" + distance + ", color=" + color + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(color, model, Integer.valueOf(preice), Integer.valueOf(weight),
+		return Objects.hash(color, Integer.valueOf(distance), model, Integer.valueOf(preice), Integer.valueOf(weight),
 				Integer.valueOf(yearOfManufacture));
 	}
 
@@ -55,9 +86,13 @@ public class Car {
 		if (getClass() != obj.getClass())
 			return false;
 		Car other = (Car) obj;
-		return color == other.color && Objects.equals(model, other.model) && preice == other.preice
-				&& weight == other.weight && yearOfManufacture == other.yearOfManufacture;
+		return color == other.color && distance == other.distance && Objects.equals(model, other.model)
+				&& preice == other.preice && weight == other.weight && yearOfManufacture == other.yearOfManufacture;
 	}
+
+
+	
+
 
 	
 	
