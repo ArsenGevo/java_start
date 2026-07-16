@@ -15,11 +15,11 @@ public class Car {
 	int preice;
 
 	int weight;
-	
-	//lesson2.7 distance.
+
+	// lesson2.7 distance.
 	private int distance = 0;
-	
-	//lesson2.5 enum for color. replaced record: Srtring color = "white";
+
+	// lesson2.5 enum for color. replaced record: Srtring color = "white";
 	Color color;
 
 	// Constructor (default):
@@ -31,40 +31,32 @@ public class Car {
 		this.yearOfManufacture = yearOfManufacture;
 		this.weight = weight;
 		this.preice = preice;
-		//Ключевое слово this в Java означает - текущий объект, внутри которого сейчас выполняется код.
+		// Ключевое слово this в Java означает - текущий объект, внутри которого сейчас
+		// выполняется код.
 	}
 
-	
-	
 	// get method для вывода переменной distance
 	public int getDistance() {
 		return distance;
 	}
-	
-	//set method "addDistance" для записи переменной distance с проверкой условия
+
+	// set method "addDistance" для записи переменной distance с проверкой условия
 	public void addDistance(int extradistance) {
 		if (extradistance > 0) {
 			distance = distance + extradistance;
-		}
-		else {
+		} else {
 			System.out.println("probeg tebe ne skrutit'");
 		}
 	}
-			
-	// перегруз метода "addDistance"	
-	 public void addDistance(double extradistance) {
-				if (extradistance > 0) {
-					distance = distance + extradistance;
-				}
-				else {
-					System.out.println("probeg tebe ne skrutit'");
-		}
-	}
 
+	/*
+	 * / попытка перегруза метода "addDistance" урок2.8 public void
+	 * addDistance(double extradistance) { if (extradistance > 0) { distance =
+	 * distance + extradistance; } else {
+	 * System.out.println("probeg tebe ne skrutit'"); } }
+	 */
 
-
-
-	//genetated methods Hash and Equals:
+	// genetated methods Hash and Equals:
 	@Override
 	public String toString() {
 		return "Car [model=" + model + ", yearOfManufacture=" + yearOfManufacture + ", preice=" + preice + ", weight="
@@ -90,11 +82,4 @@ public class Car {
 				&& preice == other.preice && weight == other.weight && yearOfManufacture == other.yearOfManufacture;
 	}
 
-
-	
-
-
-	
-	
-	
 }
