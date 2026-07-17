@@ -29,8 +29,8 @@ public class Carmanager {
 		System.out.println(renault);
 
 		// equals prakticy with genetated methods Hash and Equals:
-		System.out.println(renault.equals(toyota));
-		System.out.println(renault.equals(renault2));
+		System.out.println("(equals)renault = toyota is - " + renault.equals(toyota));
+		System.out.println("(equals)renault = renault2 is - " + renault.equals(renault2));
 
 		// for check int distance:
 		toyota.addDistance(1000);
