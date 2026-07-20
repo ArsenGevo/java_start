@@ -20,26 +20,41 @@ public class Carmanager {
 
 		PassengerCar toyota = new PassengerCar("Toyota Prius", Color.WHITE, 2008, 1200, 15000);
 
-		Car renault = new Car("Renault logan", Color.GREEN, 2017, 1300, 11000);
+		Bus renault = new Bus("Renault logan", Color.GREEN, 2017, 1300, 11000);
 
 		// frenault2 for equals prakticy
-		Car renault2 = new Car("Renault logan", Color.GREEN, 2017, 1300, 11000);
+		Bus renault2 = new Bus("Renault logan", Color.GREEN, 2017, 1300, 11000);
 
 		System.out.println(toyota);
 		System.out.println(renault);
 
 		// equals prakticy with genetated methods Hash and Equals:
-		System.out.println("(equals)renault = toyota is - " + renault.equals(toyota));
-		System.out.println("(equals)renault = renault2 is - " + renault.equals(renault2));
+		//System.out.println("(equals)renault = toyota is - " + renault.equals(toyota));
+		//System.out.println("(equals)renault = renault2 is - " + renault.equals(renault2));
 
 		// for check int distance:
-		toyota.addDistance(1000);
-		// toyota.addDistance(20,55);
-		int result = toyota.getDistance();
-		System.out.println("dist ist " + result);
+		toyota.addDistance(10000);
+		renault.addDistance(50000);
+		
+		//lesoon3.2 check workflow of methods:
+		System.out.println("toyota distance is: " + toyota.getDistance());
+		System.out.println("toyota distance on service is: " + toyota.getDistanceOnService());
+		System.out.println("is toyota ReadyToService: " + toyota.isReadyToService());
+
+		System.out.println("renault distance is: " + renault.getDistance());
+		System.out.println("is renault ReadyToService: " + renault.isReadyToService());
+		
+		toyota.setDistanceOnService(0);
+		System.out.println("toyota distance is: " + toyota.getDistance());
+		System.out.println("toyota distance on service is: " + toyota.getDistanceOnService());
+		System.out.println("is toyota ReadyToService: " + toyota.isReadyToService());
+		
+
 		
 		//проверка доступности методов подкласса PassengerCar для объекта toyota
 		toyota.openTrunk();
+		
+		
 
 	}
 

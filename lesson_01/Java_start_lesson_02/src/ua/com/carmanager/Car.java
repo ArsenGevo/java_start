@@ -36,40 +36,40 @@ public class Car {
 		// выполняется код.
 	}
 	
-	//lesssow3.2 метод для визн пробега от посл ТО
-	public boolean isReadyToService() {
-		if (distanceOnService >= 10000;) {return true;
-		} else {
-			return false;
-		}
-			
-		
-	}
-
 	// get method для вывода переменной distance
 	public int getDistance() {
 		return distance;
 	}
 
-	// set method "addDistance" для записи переменной distance с проверкой условия
+	// set method "addDistance" для записи переменной distance and distanceOnService (less3.2)
 	public void addDistance(int extradistance) {
 		if (extradistance > 0) {
 			distance = distance + extradistance;
+			distanceOnService = distanceOnService + extradistance;
 		} else {
 			System.out.println("probeg tebe ne skrutit'");
 		}
 	}
+	
+	//lesssow3.2 метод для визн пробега от посл ТО (default value 10000)
+	public boolean isReadyToService() {
+		if (distanceOnService >= 10000) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	public int getDistanceOnService() {
+		return distanceOnService;
+	}
 
-	/*
-	 * / попытка перегруза метода "addDistance" урок2.8 public void
-	 * addDistance(double extradistance) { if (extradistance > 0) { distance =
-	 * distance + extradistance; } else {
-	 * System.out.println("probeg tebe ne skrutit'"); } }
-	 */
+	//lesson3.2 canceling of distance after service	
+	public void setDistanceOnService(int distanceOnService) {
+		this.distanceOnService = 0;
+	}
 
 	// genetated methods 1)objekt's fields to string  2)Hash and Equals:
-	
-
 	@Override
 	public String toString() {
 		return "Car [model=" + model + ", yearOfManufacture=" + yearOfManufacture + ", preice=" + preice + ", weight="
