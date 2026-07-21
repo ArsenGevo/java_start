@@ -3,7 +3,7 @@ package ua.com.carmanager;
 import java.util.Objects;
 
 //оголошення класу:
-public class Car {
+public abstract class Car implements Serviceable {
 
 	// поля класу:
 	String model;
@@ -51,15 +51,7 @@ public class Car {
 		}
 	}
 	
-	//lesssow3.2 метод для визн пробега от посл ТО (default value 10000)
-	public boolean isReadyToService() {
-		if (distanceOnService >= 10000) {
-			return true;
-		} else {
-			return false;
-		}
-	}
-	
+
 	public int getDistanceOnService() {
 		return distanceOnService;
 	}

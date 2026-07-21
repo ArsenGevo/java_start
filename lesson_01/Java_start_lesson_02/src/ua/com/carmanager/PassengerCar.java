@@ -3,7 +3,7 @@ package ua.com.carmanager;
 //наследник класса Car lesson3.1
 public class PassengerCar extends Car {
 
-	// method для проверки доступности методов подкласса
+	// method для проверки доступности методов подкласса (наследника)
 	public void openTrunk() {
 		System.out.println("Trunk is open");
 	}

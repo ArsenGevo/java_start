@@ -17,7 +17,6 @@ public class Carmanager {
 		 */
 
 		// record with constructor and enum:
-
 		PassengerCar toyota = new PassengerCar("Toyota Prius", Color.WHITE, 2008, 1200, 15000);
 
 		Bus renault = new Bus("Renault logan", Color.GREEN, 2017, 1300, 11000);
@@ -44,6 +43,7 @@ public class Carmanager {
 		System.out.println("renault distance is: " + renault.getDistance());
 		System.out.println("is renault ReadyToService: " + renault.isReadyToService());
 		
+		toyota.addDistance(5000);
 		toyota.setDistanceOnService(0);
 		System.out.println("toyota distance is: " + toyota.getDistance());
 		System.out.println("toyota distance on service is: " + toyota.getDistanceOnService());
